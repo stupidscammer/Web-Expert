@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link href="/login/general.css" rel="stylesheet">
+</head>
+<body>
+    <img src="/login/Login Title.png" style="position:absolute;top:15px;left:8px;">
+    <img src="/login/Login Text.png" style="position: absolute; top: 15px; left: 700px;">
+    <img src="/login/Signup Text.png" style="position: absolute; top: 23px; left: 1030px;">
+    <form>
+        <style type="text/css">
+            input {
+                border-radius: 6px;
+                border-color: #ffffff;
+                background: none;
+                font-size: 20px;
+                color: white;
+                padding-left: 15px;
+            }
+
+                input::placeholder {
+                    color: white;
+                }
+
+            #LOGIN {
+                position: absolute;
+                top: 400px;
+                left: 650px;
+                width: 130px;
+                height: 54px;
+                background-color: #558C03;
+                border: none;
+            }
+
+                #LOGIN:hover {
+                    background-color: #4B8200;
+                }
+
+                #LOGIN:active {
+                    background-color: #3B7200;
+                }
+
+            #SIGNUP {
+                position: absolute;
+                top: 655px;
+                left: 1015px;
+                width: 130px;
+                height: 54px;
+                background-color: #F29F05;
+                border: none;
+            }
+
+                #SIGNUP:hover {
+                    background-color: #E89500;
+                }
+
+                #SIGNUP:active {
+                    background-color: #D88500;
+                }
+
+            .error {
+                position: absolute;
+                color: red;
+                font-size: 16px;
+                font-family: Arial;
+            }
+        </style>
+        <input type="text" name="Username" placeholder="Username" required style="position:absolute;top: 200px;left: 650px;width: 300px;height: 54px;">
+        <input type="password" name="Password" placeholder="Password" required style="position:absolute;top: 290px;left: 650px;width: 300px;height: 54px;">
+        <input id="LOGIN" type="submit" formaction="/login" formmethod="post" value="LOGIN">
+    </form>
+    <!--errors-->
+    <p class="error" style="top:345px;left:669px;" $$PWERR>The user name or password is incorrect.</p>
+    <p class="error" style="top: 611px; left: 1007px;" $$PCERR>The confirm password doesn't match the original password.</p>
+    <p class="error" style="top: 245px; left: 1007px;" $$AEERR>An account with this user name already exists.</p>
+    <!--end errors-->
+    <div style="position:absolute;left: 993px;top: 60px;width: 0px;height: 650px;border-left:solid;border-width:3px;border-color:white;border-radius: 7px;"></div>
+    <form>
+
+        <input type="text" name="Username" placeholder="Username" required style="position:absolute;top: 200px;left: 1015px;width: 300px;height: 54px;">
+        <input type="text" name="Name" placeholder="Name" required style="position:absolute;top: 290px;left: 1015px;width: 300px;height: 54px;">
+        <input type="email" name="Email" placeholder="Email" required style="position:absolute;top: 380px;left: 1015px;width: 300px;height: 54px;">
+        <input type="password" name="Password" placeholder="Password" required style="position:absolute;top: 470px;left: 1015px;width: 300px;height: 54px;">
+        <input type="password" name="ConfirmPassword" placeholder="Confirm Password" required style="position:absolute;top: 560px;left: 1015px;width: 300px;height: 54px;">
+        <input id="SIGNUP" type="submit" formaction="/login/signup" formmethod="post" value="SIGNUP">
+    </form>
+
+
+</body>
+</html>
